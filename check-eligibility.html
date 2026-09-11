@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Loan Eligibility — BJ FINANCES</title>
+  <meta name="description" content="Check your loan eligibility with BJ FINANCES. Share your basic profile details and let our team assist you in exploring suitable financial options.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .eligibility-form-wrap { max-width: 700px; margin: -60px auto 40px; position: relative; z-index: 10; }
+    .form-step { display: none; }
+    .form-step.active { display: block; }
+    .step-indicator { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; position: relative; max-width: 400px; margin-left: auto; margin-right: auto; }
+    .step-indicator::before { content: ''; position: absolute; top: 18px; left: 0; right: 0; height: 2px; background: var(--border); z-index: 0; }
+    .step-dot { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; background: var(--white); }
+    .step-dot__circle { width: 36px; height: 36px; border-radius: 50%; background: var(--white); border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--text-light); font-size: 0.9rem; transition: all var(--transition); }
+    .step-dot.active .step-dot__circle { border-color: var(--navy); background: var(--navy); color: var(--white); }
+    .step-dot.done .step-dot__circle { border-color: var(--green); background: var(--green); color: var(--white); }
+    .step-dot__label { font-size: 0.75rem; font-weight: 600; color: var(--text-light); position: absolute; top: 44px; white-space: nowrap; }
+    .step-dot.active .step-dot__label { color: var(--navy); }
+    .step-dot.done .step-dot__label { color: var(--green); }
+    .form-actions { display: flex; justify-content: space-between; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body style="background:var(--bg-light)">
+
+<nav class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <img src="images/logo.svg" alt="BJ FINANCES Logo" class="navbar__logo-img" width="48" height="48">
+      <div class="navbar__logo-text">
+        <span class="navbar__logo-name">BJ <span class="text-gold">FINANCES</span></span>
+        <span class="navbar__logo-tagline">Your Growth, Our Commitment</span>
+      </div>
+    </a>
+    <nav class="navbar__nav">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <span class="dropdown-toggle" tabindex="0" role="button">Loans <span>▾</span></span>
+        <div class="dropdown-menu">
+          <a href="personal-loan.html">Personal Loan</a><a href="overdraft.html">Overdraft / OD</a>
+          <a href="balance-transfer.html">Balance Transfer</a><a href="top-up-loan.html">Top-Up Loan</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a><a href="how-it-works.html">How It Works</a>
+      <a href="careers.html">Careers</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="navbar__actions">
+      <a href="tel:+918303377024" class="btn btn-outline btn-sm">📞 Call Us</a>
+    </div>
+    <button class="navbar__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+    <strong style="color:var(--navy)">BJ FINANCES</strong>
+    <button id="mobileClose" style="background:none;border:none;font-size:1.5rem;cursor:pointer;">✕</button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="#" class="mobile-toggle" style="display:flex;justify-content:space-between;">Loans <span class="toggle-arrow">▾</span></a>
+  <div class="mobile-sub" style="display:none;">
+    <a href="personal-loan.html">Personal Loan</a><a href="overdraft.html">Overdraft / OD</a>
+    <a href="balance-transfer.html">Balance Transfer</a><a href="top-up-loan.html">Top-Up Loan</a>
+  </div>
+  <a href="about.html">About Us</a><a href="how-it-works.html">How It Works</a>
+  <a href="careers.html">Careers</a><a href="contact.html">Contact Us</a>
+</div>
+
+<main>
+<div class="page-hero" style="padding-bottom:120px;">
+  <div class="container">
+    <h1>Check Your Eligibility</h1>
+    <p>Share your details and let our team assist you in finding suitable financial options.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="eligibility-form-wrap">
+    <div class="form-card">
+      
+      <!-- Step Indicator -->
+      <div class="step-indicator">
+        <div class="step-dot active" id="dot-1">
+          <div class="step-dot__circle">1</div>
+          <div class="step-dot__label">Personal</div>
+        </div>
+        <div class="step-dot" id="dot-2">
+          <div class="step-dot__circle">2</div>
+          <div class="step-dot__label">Employment</div>
+        </div>
+        <div class="step-dot" id="dot-3">
+          <div class="step-dot__circle">3</div>
+          <div class="step-dot__label">Financial</div>
+        </div>
+      </div>
+
+      <form id="eligibilityForm" novalidate>
+        
+        <!-- STEP 1: Personal Details -->
+        <div class="form-step active" id="step-1">
+          <h3 style="color:var(--navy);margin-bottom:20px;text-align:center;">Personal Details</h3>
+          <div class="form-grid-2">
+            <div class="form-group"><label>Full Name *</label><input type="text" name="fullName" required placeholder="As per PAN"></div>
+            <div class="form-group"><label>Mobile Number *</label><input type="tel" name="mobile" required maxlength="10" placeholder="10-digit number"></div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="Optional"></div>
+            <div class="form-group"><label>City of Residence *</label><input type="text" name="city" required placeholder="e.g. Noida"></div>
+          </div>
+          <div class="form-actions" style="justify-content:flex-end;">
+            <button type="button" class="btn btn-primary" data-next="2">Next Step →</button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Employment Details -->
+        <div class="form-step" id="step-2">
+          <h3 style="color:var(--navy);margin-bottom:20px;text-align:center;">Employment Details</h3>
+          <div class="form-group">
+            <label>Employment Type *</label>
+            <select name="empType" required>
+              <option value="">Select...</option>
+              <option>Salaried – Private Company</option>
+              <option>Salaried – Govt/PSU</option>
+              <option>Salaried – MNC</option>
+              <option>Self Employed Professional</option>
+              <option>Self Employed Business</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Company / Business Name *</label><input type="text" name="company" required></div>
+          <div class="form-grid-2">
+            <div class="form-group"><label>Monthly Net Salary/Income (₹) *</label><input type="number" name="income" required min="0"></div>
+            <div class="form-group"><label>Salary Credit Mode</label>
+              <select name="salaryMode">
+                <option value="">Select...</option>
+                <option>Bank Transfer (Account)</option>
+                <option>Cheque</option>
+                <option>Cash</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-outline" data-prev="1">← Back</button>
+            <button type="button" class="btn btn-primary" data-next="3">Next Step →</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Financial Details -->
+        <div class="form-step" id="step-3">
+          <h3 style="color:var(--navy);margin-bottom:20px;text-align:center;">Loan Requirement</h3>
+          <div class="form-group">
+            <label>Required Product *</label>
+            <select name="product" required>
+              <option value="">Select...</option>
+              <option>Personal Loan</option>
+              <option>Overdraft / OD</option>
+              <option>Balance Transfer</option>
+              <option>Top-Up Loan</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Required Amount (₹) *</label><input type="number" name="amount" required min="0"></div>
+          
+          <div style="background:var(--bg-light);padding:16px;border-radius:var(--radius-sm);margin:24px 0;">
+            <p style="font-size:0.85rem;font-weight:700;margin-bottom:12px;color:var(--navy);">Existing Obligations (Optional but recommended)</p>
+            <div class="form-grid-2" style="margin-bottom:0;">
+              <div class="form-group mb-0"><label>Total Existing EMI (₹/mo)</label><input type="number" name="existingEmi" placeholder="0 if none"></div>
+              <div class="form-group mb-0">
+                <label>Do you have an active loan?</label>
+                <select name="hasExistingLoan">
+                  <option value="No">No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-actions" style="flex-direction:column;gap:16px;">
+            <div style="display:flex;justify-content:space-between;width:100%;">
+              <button type="button" class="btn btn-outline" data-prev="2">← Back</button>
+              <button type="submit" class="btn btn-primary">SUBMIT FOR REVIEW</button>
+            </div>
+            <p class="form-disclaimer" style="margin-top:0;">By submitting this form, you consent to being contacted by BJ FINANCES regarding your enquiry. Final loan approval and terms are subject to the respective bank/NBFC's policies and credit assessment.</p>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="images/logo.svg" alt="BJ FINANCES Logo" class="footer__logo-img" width="40" height="40">
+          <div class="footer__logo-text">BJ <span class="text-gold">FINANCES</span></div>
+        </div>
+        <p class="footer__desc">Your Growth, Our Commitment.</p>
+        <div class="footer__contact-item"><span class="footer__contact-icon">📍</span><span>Block G, Noida Sector 3, Noida, UP – 201301</span></div>
+        <div class="footer__contact-item"><span class="footer__contact-icon">📞</span><a href="tel:+918303377024">+91 83033 77024</a></div>
+      </div>
+      <div><h5>Products</h5><nav class="footer__links"><a href="personal-loan.html">Personal Loan</a><a href="overdraft.html">Overdraft / OD</a><a href="balance-transfer.html">Balance Transfer</a><a href="top-up-loan.html">Top-Up Loan</a></nav></div>
+      <div><h5>Company</h5><nav class="footer__links"><a href="about.html">About Us</a><a href="how-it-works.html">How It Works</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></nav></div>
+      <div><h5>Legal</h5><nav class="footer__links"><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="disclaimer.html">Disclaimer</a></nav></div>
+    </div>
+    <div class="footer__disclaimer"><strong>Disclaimer:</strong> BJ FINANCES is a financial services facilitator. Loan approval, amount, interest rate and terms are determined solely by the respective lender.</div>
+    <div class="footer__bottom"><span>© 2024 BJ FINANCES. All rights reserved.</span></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+</body>
+</html>

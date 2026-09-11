@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers — Build Your Career With BJ FINANCES</title>
+  <meta name="description" content="Join BJ FINANCES in Noida. We are hiring Telesales Executives, Team Leads and more. Apply online today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .dept-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 32px; }
+    .dept-card { background: var(--bg-light); border-radius: var(--radius-sm); padding: 20px; text-align: center; border: 1px solid var(--border); }
+    .dept-card .icon { font-size: 2rem; margin-bottom: 12px; }
+    .dept-card h4 { font-size: 0.9rem; margin: 0; }
+    @media(max-width:768px) { .dept-grid { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <img src="images/logo.svg" alt="BJ FINANCES Logo" class="navbar__logo-img" width="48" height="48">
+      <div class="navbar__logo-text">
+        <span class="navbar__logo-name">BJ <span class="text-gold">FINANCES</span></span>
+        <span class="navbar__logo-tagline">Your Growth, Our Commitment</span>
+      </div>
+    </a>
+    <nav class="navbar__nav">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <span class="dropdown-toggle" tabindex="0" role="button">Loans <span>▾</span></span>
+        <div class="dropdown-menu">
+          <a href="personal-loan.html">Personal Loan</a><a href="overdraft.html">Overdraft / OD</a>
+          <a href="balance-transfer.html">Balance Transfer</a><a href="top-up-loan.html">Top-Up Loan</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="careers.html" style="color:var(--navy);font-weight:800;">Careers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="navbar__actions">
+      <a href="tel:+918303377024" class="btn btn-outline btn-sm">📞 Call Us</a>
+    </div>
+    <button class="navbar__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+    <strong style="color:var(--navy)">BJ FINANCES</strong>
+    <button id="mobileClose" style="background:none;border:none;font-size:1.5rem;cursor:pointer;">✕</button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="careers.html">Careers</a><a href="contact.html">Contact Us</a>
+</div>
+
+<main>
+<div class="page-hero">
+  <div class="container">
+    <span class="section-label" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.9);">Careers</span>
+    <h1>Build Your Career With<br>BJ FINANCES</h1>
+    <p>Join our growing team of approximately 20 professionals in Noida. We are looking for motivated individuals to help us deliver excellent financial services.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="text-center">
+      <h2>Our Departments</h2>
+      <p style="margin-top:12px;">We are expanding across multiple functional areas.</p>
+    </div>
+    <div class="dept-grid">
+      <div class="dept-card"><div class="icon">📞</div><h4>Telesales</h4></div>
+      <div class="dept-card"><div class="icon">👥</div><h4>Team Leadership</h4></div>
+      <div class="dept-card"><div class="icon">💼</div><h4>Sales</h4></div>
+      <div class="dept-card"><div class="icon">⚙️</div><h4>Operations</h4></div>
+      <div class="dept-card"><div class="icon">🎧</div><h4>Customer Support</h4></div>
+      <div class="dept-card"><div class="icon">💻</div><h4>Product & Tech</h4></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="open-roles">
+  <div class="container">
+    <h2 class="mb-32">Open Positions</h2>
+    
+    <div class="job-card">
+      <div>
+        <h4>Telesales Executive – Financial Products</h4>
+        <div class="job-card__meta">
+          <span class="job-badge job-badge--dept">Telesales</span>
+          <span class="job-badge job-badge--type">Full-Time</span>
+          <span class="job-badge job-badge--loc">📍 Noida</span>
+        </div>
+        <p>Responsible for contacting potential customers, understanding their loan requirements, and guiding them through preliminary eligibility checks.</p>
+      </div>
+      <a href="#applyForm" class="btn btn-outline" onclick="document.getElementById('posApply').value='Telesales Executive'">Apply Now</a>
+    </div>
+
+    <div class="job-card">
+      <div>
+        <h4>Team Lead – Telesales</h4>
+        <div class="job-card__meta">
+          <span class="job-badge job-badge--dept">Team Leadership</span>
+          <span class="job-badge job-badge--type">Full-Time</span>
+          <span class="job-badge job-badge--loc">📍 Noida</span>
+        </div>
+        <p>Manage and mentor a team of telesales executives. Ensure team targets are met while maintaining high quality in customer interactions.</p>
+      </div>
+      <a href="#applyForm" class="btn btn-outline" onclick="document.getElementById('posApply').value='Team Lead'">Apply Now</a>
+    </div>
+
+    <div class="job-card">
+      <div>
+        <h4>Customer Support Representative</h4>
+        <div class="job-card__meta">
+          <span class="job-badge job-badge--dept">Support</span>
+          <span class="job-badge job-badge--type">Full-Time</span>
+          <span class="job-badge job-badge--loc">📍 Noida</span>
+        </div>
+        <p>Assist existing applicants with queries regarding their application status, documentation requirements, and general support.</p>
+      </div>
+      <a href="#applyForm" class="btn btn-outline" onclick="document.getElementById('posApply').value='Customer Support'">Apply Now</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="applyForm">
+  <div class="container container--sm">
+    <div class="form-card">
+      <h2 style="color:var(--navy);margin-bottom:8px;">Submit Your Application</h2>
+      <p style="font-size:0.9rem;margin-bottom:24px;">Fill out the form below to apply for a position. Our HR team will review your profile.</p>
+      <form id="careersForm" novalidate>
+        <div class="form-grid-2">
+          <div class="form-group"><label>Full Name *</label><input type="text" name="fullName" required></div>
+          <div class="form-group"><label>Mobile Number *</label><input type="tel" name="mobile" required maxlength="10"></div>
+        </div>
+        <div class="form-grid-2">
+          <div class="form-group"><label>Email Address *</label><input type="email" name="email" required></div>
+          <div class="form-group">
+            <label>Position Applied For *</label>
+            <select name="position" id="posApply" required>
+              <option value="">Select Position...</option>
+              <option value="Telesales Executive">Telesales Executive</option>
+              <option value="Team Lead">Team Lead</option>
+              <option value="Customer Support">Customer Support</option>
+              <option value="General Application">General Application</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Total Experience</label>
+          <select name="experience">
+            <option value="Fresher">Fresher</option>
+            <option value="1-3 Years">1-3 Years</option>
+            <option value="3-5 Years">3-5 Years</option>
+            <option value="5+ Years">5+ Years</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Resume (Optional for initial contact)</label>
+          <input type="file" name="resume" accept=".pdf,.doc,.docx" style="padding:10px;">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="margin-top:16px;">Submit Application</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="images/logo.svg" alt="BJ FINANCES Logo" class="footer__logo-img" width="40" height="40">
+          <div class="footer__logo-text">BJ <span class="text-gold">FINANCES</span></div>
+        </div>
+        <p class="footer__desc">Your Growth, Our Commitment.</p>
+      </div>
+    </div>
+    <div class="footer__bottom"><span>© 2024 BJ FINANCES. All rights reserved.</span></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+</body>
+</html>

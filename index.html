@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BJ FINANCES — Your Growth, Our Commitment | Personal Loans, Balance Transfer, OD in Noida</title>
+  <meta name="description" content="BJ FINANCES helps you explore Personal Loans, Overdraft, Balance Transfer and Top-Up Loan options in Noida. Professional financial services guidance with dedicated support.">
+  <meta name="keywords" content="personal loan noida, balance transfer, overdraft facility, top up loan, loan eligibility, BJ Finances">
+  <meta property="og:title" content="BJ FINANCES — Your Growth, Our Commitment">
+  <meta property="og:description" content="Explore suitable financial options with guidance from BJ FINANCES. Professional loan facilitation in Noida, UP.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── HERO IMAGE OVERLAY ── */
+    .hero-img-wrap {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.35);
+    }
+    .hero-img-wrap img { width: 100%; height: 340px; object-fit: cover; }
+    .hero-img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(18,48,91,0.6), transparent);
+    }
+    /* ── TRUST STRIP ── */
+    .trust-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+    }
+    .trust-strip__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .trust-strip__item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-mid);
+    }
+    .trust-strip__item .icon { color: var(--green); font-size: 1rem; }
+    /* ── CALCULATOR SECTION ── */
+    .calc-tabs { display: flex; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; }
+    .calc-tab {
+      padding: 10px 20px;
+      border-radius: 50px;
+      border: 2px solid var(--border);
+      background: var(--white);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-mid);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .calc-tab.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--white);
+    }
+    .calc-panel { display: none; }
+    .calc-panel.active { display: block; }
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--green) 0%, var(--navy) 100%);
+      border-radius: var(--radius-xl);
+      padding: 56px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: -50%; right: -10%;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
+      pointer-events: none;
+    }
+    .cta-banner h2 { color: var(--white); margin-bottom: 12px; }
+    .cta-banner p { color: rgba(255,255,255,0.8); margin-bottom: 28px; font-size: 1rem; }
+    .cta-banner .btn-group { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    /* ── TESTIMONIAL / HIGHLIGHT ── */
+    .highlights-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: var(--navy);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+    }
+    .highlight-item {
+      padding: 32px 28px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .highlight-item:last-child { border-right: none; }
+    .highlight-item .number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #4ECBB4;
+      display: block;
+    }
+    .highlight-item .label {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 4px;
+    }
+    @media (max-width: 768px) {
+      .highlights-bar { grid-template-columns: 1fr; }
+      .highlight-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .highlight-item:last-child { border-bottom: none; }
+      .cta-banner { padding: 40px 24px; }
+      .trust-strip__inner { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAVBAR ════════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo" aria-label="BJ FINANCES Home">
+      <img src="images/logo.svg" alt="BJ FINANCES Logo" class="navbar__logo-img" width="48" height="48">
+      <div class="navbar__logo-text">
+        <span class="navbar__logo-name">BJ <span class="text-gold">FINANCES</span></span>
+        <span class="navbar__logo-tagline">Your Growth, Our Commitment</span>
+      </div>
+    </a>
+    <nav class="navbar__nav" aria-label="Site navigation">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <span class="dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+          Loans <span aria-hidden="true">▾</span>
+        </span>
+        <div class="dropdown-menu" role="menu">
+          <a href="personal-loan.html" role="menuitem">Personal Loan</a>
+          <a href="overdraft.html" role="menuitem">Overdraft / OD</a>
+          <a href="balance-transfer.html" role="menuitem">Balance Transfer</a>
+          <a href="top-up-loan.html" role="menuitem">Top-Up Loan</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="navbar__actions">
+      <a href="tel:+918303377024" class="btn btn-outline btn-sm" id="nav-call-btn">📞 Call Us</a>
+      <a href="check-eligibility.html" class="btn btn-primary btn-sm" id="nav-cta-btn">Check Eligibility</a>
+    </div>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Mobile menu">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+    <strong style="color:var(--navy);font-size:1rem;">BJ FINANCES</strong>
+    <button id="mobileClose" style="background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-dark);" aria-label="Close menu">✕</button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="#" class="mobile-toggle" style="display:flex;justify-content:space-between;align-items:center;">Loans <span class="toggle-arrow">▾</span></a>
+  <div class="mobile-sub" style="display:none;">
+    <a href="personal-loan.html">Personal Loan</a>
+    <a href="overdraft.html">Overdraft / OD</a>
+    <a href="balance-transfer.html">Balance Transfer</a>
+    <a href="top-up-loan.html">Top-Up Loan</a>
+  </div>
+  <a href="about.html">About Us</a>
+  <a href="how-it-works.html">How It Works</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact Us</a>
+  <div class="mobile-nav-cta">
+    <a href="check-eligibility.html" class="btn btn-primary btn-full" id="mobile-elig-btn">Check Eligibility</a>
+    <a href="tel:+918303377024" class="btn btn-outline btn-full" id="mobile-call-btn">📞 +91 83033 77024</a>
+  </div>
+</div>
+
+<!-- ══ HERO ══════════════════════════════════════════════════ -->
+<main>
+<section class="hero" aria-label="Hero section">
+  <div class="container">
+    <div class="hero__inner">
+      <!-- Left Content -->
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span>🏢</span>
+          <span>Trusted Financial Services — Noida, UP</span>
+        </div>
+        <h1>Find the Right<br><span class="accent">Financial Solution</span><br>for Your Needs</h1>
+        <p class="hero__sub">Explore suitable loan and financial options with guidance from BJ FINANCES. Share your requirements and our team will assist you through the process.</p>
+        <div class="hero__actions">
+          <a href="check-eligibility.html" class="btn btn-primary btn-lg" id="hero-elig-btn">✅ Check Your Eligibility</a>
+          <a href="tel:+918303377024" class="btn btn-outline-white btn-lg" id="hero-call-btn">📞 Talk to an Expert</a>
+        </div>
+        <div class="hero__trust">
+          <div class="hero__trust-item"><span class="icon">🔒</span> 100% Confidential</div>
+          <div class="hero__trust-item"><span class="icon">🚀</span> Fast Processing</div>
+          <div class="hero__trust-item"><span class="icon">🤝</span> No Hidden Fees</div>
+        </div>
+      </div>
+      <!-- Right Form -->
+      <div>
+        <div class="hero-form-card" id="heroFormCard">
+          <h3>Check My Options</h3>
+          <p>Share a few details and our team will reach out to assist you.</p>
+          <form id="heroForm" novalidate aria-label="Quick eligibility form">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="hf-name">Full Name *</label>
+                <input type="text" id="hf-name" name="fullName" placeholder="Your full name" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="hf-mobile">Mobile Number *</label>
+                <input type="tel" id="hf-mobile" name="mobile" placeholder="10-digit number" required autocomplete="tel" maxlength="10">
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="hf-emptype">Employment Type</label>
+                <select id="hf-emptype" name="empType">
+                  <option value="">Select...</option>
+                  <option>Salaried – Private</option>
+                  <option>Salaried – Govt/PSU</option>
+                  <option>Salaried – MNC</option>
+                  <option>Self Employed</option>
+                  <option>Business Owner</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="hf-income">Monthly Income (₹)</label>
+                <input type="number" id="hf-income" name="income" placeholder="e.g. 35000" min="0">
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="hf-amount">Required Amount (₹)</label>
+                <input type="number" id="hf-amount" name="amount" placeholder="e.g. 500000" min="0">
+              </div>
+              <div class="form-group">
+                <label for="hf-product">Product</label>
+                <select id="hf-product" name="product">
+                  <option value="">Select...</option>
+                  <option>Personal Loan</option>
+                  <option>Overdraft / OD</option>
+                  <option>Balance Transfer</option>
+                  <option>Top-Up Loan</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full btn-lg" id="hero-submit-btn" style="margin-top:4px;">CHECK MY OPTIONS →</button>
+            <p class="hero-form-disclaimer">By submitting this form, you consent to being contacted by BJ FINANCES regarding your enquiry. Loan approval and final terms are subject to the respective bank/NBFC's policies and credit assessment.</p>
+          </form>
+          <div class="form-success" style="display:none;">
+            <div class="form-success__icon">✅</div>
+            <h3 style="color:var(--green);">Thank You!</h3>
+            <p style="font-size:0.9rem;color:var(--text-mid);">Your information has been received. A BJ FINANCES representative may contact you to understand your requirements and discuss the next steps.</p>
+            <p style="font-size:0.78rem;color:var(--text-light);margin-top:10px;">Reference ID: <strong class="lead-id"></strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRUST STRIP ═══════════════════════════════════════════ -->
+<div class="trust-strip">
+  <div class="trust-strip__inner container">
+    <div class="trust-strip__item"><span class="icon">🏦</span> Multiple Bank Partners</div>
+    <div class="trust-strip__item"><span class="icon">👤</span> Dedicated Relationship Manager</div>
+    <div class="trust-strip__item"><span class="icon">📋</span> Documentation Assistance</div>
+    <div class="trust-strip__item"><span class="icon">🔒</span> Data Confidentiality</div>
+    <div class="trust-strip__item"><span class="icon">📞</span> End-to-End Support</div>
+  </div>
+</div>
+
+<!-- ══ STATS BAR ══════════════════════════════════════════════ -->
+<div class="stat-bar">
+  <div class="stat-bar__inner container">
+    <div class="stat-item">
+      <span class="stat-item__number" data-count="500" data-suffix="+" id="stat1">500+</span>
+      <span class="stat-item__label">Customers Assisted</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-item__number" data-count="4" data-suffix="+" id="stat2">4+</span>
+      <span class="stat-item__label">Financial Products</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-item__number" data-count="20" data-suffix="+" id="stat3">20+</span>
+      <span class="stat-item__label">Team Members</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-item__number" data-count="100" data-suffix="%" id="stat4">100%</span>
+      <span class="stat-item__label">Confidential & Secure</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PRODUCTS ═══════════════════════════════════════════════ -->
+<section class="section" id="products" aria-labelledby="products-heading">
+  <div class="container">
+    <div class="text-center mb-48">
+      <span class="section-label">Our Products</span>
+      <h2 id="products-heading">Financial Solutions Designed Around Your Needs</h2>
+      <p style="max-width:560px;margin:16px auto 0;">Explore a range of financial products suitable for your profile and requirements, with dedicated guidance at every step.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="product-card">
+        <div class="product-card__icon" aria-hidden="true">💳</div>
+        <h3>Personal Loan</h3>
+        <p>For medical emergencies, weddings, education, travel, debt consolidation, and personal financial requirements.</p>
+        <a href="personal-loan.html" class="product-card__link" id="prod-pl-link">Check Personal Loan Eligibility →</a>
+      </div>
+      <div class="product-card featured">
+        <div class="product-card__icon" aria-hidden="true">🔄</div>
+        <h3>Balance Transfer</h3>
+        <p>Explore whether transferring an existing loan to another lender may offer more suitable repayment terms for your situation.</p>
+        <a href="balance-transfer.html" class="product-card__link" id="prod-bt-link">Check BT Options →</a>
+      </div>
+      <div class="product-card">
+        <div class="product-card__icon" aria-hidden="true">📊</div>
+        <h3>Overdraft / OD</h3>
+        <p>Flexible access to funds for eligible customers. Interest applicable on the amount utilised, as per lender terms.</p>
+        <a href="overdraft.html" class="product-card__link" id="prod-od-link">Explore OD Options →</a>
+      </div>
+      <div class="product-card">
+        <div class="product-card__icon" aria-hidden="true">⬆️</div>
+        <h3>Top-Up Loan</h3>
+        <p>For eligible customers with an existing loan who may require additional funds on their current arrangement.</p>
+        <a href="top-up-loan.html" class="product-card__link" id="prod-tu-link">Check Top-Up Eligibility →</a>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:0.82rem;color:var(--text-light);margin-top:28px;">More financial products coming soon — Business Loans, Loan Against Property, Home Loans, Credit Cards and more.</p>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ════════════════════════════════════════ -->
+<section class="section section--alt" id="how-it-works" aria-labelledby="hiw-heading">
+  <div class="container">
+    <div class="text-center mb-48">
+      <span class="section-label">The Process</span>
+      <h2 id="hiw-heading">How BJ FINANCES Works for You</h2>
+      <p style="max-width:520px;margin:16px auto 0;">A simple, transparent process from requirement to application.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step__number">1</div>
+        <h4>Tell Us Your Requirement</h4>
+        <p>Share your basic financial requirement and the product you are interested in through our short form or a quick call.</p>
+      </div>
+      <div class="step">
+        <div class="step__number">2</div>
+        <h4>Our Team Reviews Your Profile</h4>
+        <p>Our team reviews the information provided and discusses suitable options based on your profile and requirements.</p>
+      </div>
+      <div class="step">
+        <div class="step__number">3</div>
+        <h4>Explore Available Options</h4>
+        <p>Where applicable, suitable options may be explored based on your profile and partner lender eligibility criteria.</p>
+      </div>
+      <div class="step">
+        <div class="step__number">4</div>
+        <h4>Application Assistance</h4>
+        <p>Our team assists you through the documentation and application process with the relevant bank or NBFC.</p>
+      </div>
+    </div>
+    <div class="highlight-box" style="margin-top:36px;max-width:700px;margin-left:auto;margin-right:auto;text-align:center;">
+      ⚠️ BJ FINANCES facilitates applications and financial services. Loan approval, amount, interest rate, tenure and other terms are decided solely by the respective bank or NBFC.
+    </div>
+  </div>
+</section>
+
+<!-- ══ EMI CALCULATOR ════════════════════════════════════════ -->
+<section class="section" aria-labelledby="calc-heading">
+  <div class="container">
+    <div class="text-center mb-48">
+      <span class="section-label">Tools</span>
+      <h2 id="calc-heading">Financial Calculators</h2>
+      <p style="max-width:500px;margin:16px auto 0;">Use our calculators for quick estimates. Results are indicative only.</p>
+    </div>
+    <div style="max-width:700px;margin:0 auto;">
+      <div class="calc-tabs" role="tablist" aria-label="Calculator types">
+        <button class="calc-tab active" id="tab-emi" role="tab" aria-selected="true" aria-controls="panel-emi" onclick="switchTab('emi')">EMI Calculator</button>
+        <button class="calc-tab" id="tab-bt" role="tab" aria-selected="false" aria-controls="panel-bt" onclick="switchTab('bt')">Balance Transfer</button>
+        <button class="calc-tab" id="tab-elig" role="tab" aria-selected="false" aria-controls="panel-elig" onclick="switchTab('elig')">Eligibility Estimate</button>
+      </div>
+
+      <!-- EMI Panel -->
+      <div class="calc-panel active calculator-card" id="panel-emi" role="tabpanel" aria-labelledby="tab-emi">
+        <div id="emiCalculator">
+          <div class="calc-slider-group">
+            <label for="loanAmount">Loan Amount <span id="loanAmountDisp">₹5,00,000</span></label>
+            <input type="range" id="loanAmount" min="50000" max="5000000" value="500000" step="50000">
+          </div>
+          <div class="calc-slider-group">
+            <label for="interestRate">Interest Rate (p.a.) <span id="interestRateDisp">12.0%</span></label>
+            <input type="range" id="interestRate" min="8" max="36" value="12" step="0.5">
+          </div>
+          <div class="calc-slider-group">
+            <label for="tenure">Tenure <span id="tenureDisp">48 Months</span></label>
+            <input type="range" id="tenure" min="6" max="84" value="48" step="6">
+          </div>
+          <div class="calc-result">
+            <div class="calc-result__item">
+              <span class="calc-result__value" id="emiResult">₹0</span>
+              <span class="calc-result__label">Monthly EMI (Est.)</span>
+            </div>
+            <div class="calc-result__item">
+              <span class="calc-result__value" id="totalInterestResult">₹0</span>
+              <span class="calc-result__label">Total Interest (Est.)</span>
+            </div>
+            <div class="calc-result__item">
+              <span class="calc-result__value" id="totalPaymentResult">₹0</span>
+              <span class="calc-result__label">Total Payment (Est.)</span>
+            </div>
+          </div>
+          <p style="font-size:0.72rem;color:var(--text-light);margin-top:12px;text-align:center;">* Indicative calculation only. Actual EMI, interest rate and tenure are determined by the respective lender.</p>
+        </div>
+      </div>
+
+      <!-- BT Panel -->
+      <div class="calc-panel calculator-card" id="panel-bt" role="tabpanel" aria-labelledby="tab-bt" style="display:none;">
+        <div id="btCalculator">
+          <div class="calc-slider-group">
+            <label for="btOutstanding">Outstanding Balance <span id="btOutstandingDisp">₹3,00,000</span></label>
+            <input type="range" id="btOutstanding" min="50000" max="3000000" value="300000" step="25000">
+          </div>
+          <div class="calc-slider-group">
+            <label for="btCurrentRate">Current Interest Rate <span id="btCurrentRateDisp">18.0%</span></label>
+            <input type="range" id="btCurrentRate" min="10" max="36" value="18" step="0.5">
+          </div>
+          <div class="calc-slider-group">
+            <label for="btTenure">Remaining Tenure <span id="btTenureDisp">36 Months</span></label>
+            <input type="range" id="btTenure" min="6" max="84" value="36" step="6">
+          </div>
+          <div class="calc-slider-group">
+            <label for="btNewRate">Proposed New Rate <span id="btNewRateDisp">14.0%</span></label>
+            <input type="range" id="btNewRate" min="8" max="30" value="14" step="0.5">
+          </div>
+          <div class="calc-result">
+            <div class="calc-result__item">
+              <span class="calc-result__value" id="btCurrentEmi">₹0</span>
+              <span class="calc-result__label">Current EMI (Est.)</span>
+            </div>
+            <div class="calc-result__item">
+              <span class="calc-result__value" id="btNewEmi">₹0</span>
+              <span class="calc-result__label">New EMI (Est.)</span>
+            </div>
+            <div class="calc-result__item">
+              <span class="calc-result__value" id="btSavings">₹0</span>
+              <span class="calc-result__label">Potential Monthly Difference</span>
+            </div>
+          </div>
+          <p style="font-size:0.72rem;color:var(--text-light);margin-top:12px;text-align:center;">* Indicative only. Actual BT terms are subject to lender approval and applicable charges.</p>
+        </div>
+      </div>
+
+      <!-- Eligibility Panel -->
+      <div class="calc-panel calculator-card" id="panel-elig" role="tabpanel" aria-labelledby="tab-elig" style="display:none;">
+        <div id="eligibilityCalc">
+          <div class="form-group">
+            <label for="eligIncome">Monthly Net Salary / Income (₹)</label>
+            <input type="number" id="eligIncome" placeholder="e.g. 45000" min="0">
+          </div>
+          <div class="form-group">
+            <label for="eligExistingEmi">Existing Monthly EMI Obligations (₹)</label>
+            <input type="number" id="eligExistingEmi" placeholder="e.g. 5000" min="0">
+          </div>
+          <div style="background:var(--bg-light);border-radius:var(--radius-md);padding:20px;margin-top:8px;">
+            <p id="eligResult" style="font-size:0.95rem;color:var(--navy);font-weight:600;text-align:center;">Enter your details above to see an indicative estimate.</p>
+          </div>
+          <p style="font-size:0.72rem;color:var(--text-light);margin-top:12px;text-align:center;">* This is an indicative estimate only. Final eligibility is determined by the respective lender based on its policies and credit assessment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY BJ FINANCES ═══════════════════════════════════════ -->
+<section class="section section--alt" aria-labelledby="why-heading">
+  <div class="container">
+    <div class="text-center mb-48">
+      <span class="section-label">Why Choose Us</span>
+      <h2 id="why-heading">Why Choose BJ FINANCES?</h2>
+      <p style="max-width:520px;margin:16px auto 0;">We focus on what matters most to you — professional service, clear communication and genuine support.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="why-card">
+        <div class="why-card__icon" aria-hidden="true">🎯</div>
+        <h4>Personalised Assistance</h4>
+        <p>We understand your requirement before guiding you toward suitable options, not a one-size-fits-all approach.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon" aria-hidden="true">🏦</div>
+        <h4>Multiple Financial Options</h4>
+        <p>Explore available loan options based on your profile, employment type and financial requirements.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon" aria-hidden="true">📞</div>
+        <h4>Dedicated Support</h4>
+        <p>Our team assists you throughout the application process with a dedicated relationship manager for each customer.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon" aria-hidden="true">💬</div>
+        <h4>Transparent Communication</h4>
+        <p>We provide clear information about the process, documentation requirements and realistic expectations.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon" aria-hidden="true">🔒</div>
+        <h4>Data Confidentiality</h4>
+        <p>Your financial information is handled responsibly with strict data confidentiality protocols.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon" aria-hidden="true">🌱</div>
+        <h4>Customer-Focused Approach</h4>
+        <p>Your financial requirement and customer journey remain central to our process from start to finish.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HIGHLIGHTS BAR ════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="highlights-bar">
+      <div class="highlight-item">
+        <span class="number">Salaried</span>
+        <span class="label">Primary customer segment served</span>
+      </div>
+      <div class="highlight-item">
+        <span class="number">Personal & BT</span>
+        <span class="label">Our key product specialisation</span>
+      </div>
+      <div class="highlight-item">
+        <span class="number">Noida Based</span>
+        <span class="label">Serving PAN India customers</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BANNER ════════════════════════════════════════════ -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Ready to Explore Your Options?</h2>
+      <p>Share your requirement with us and our team will reach out to assist you with suitable financial options.</p>
+      <div class="btn-group">
+        <a href="check-eligibility.html" class="btn btn-outline-white btn-lg" id="cta-elig-btn">✅ Check Eligibility</a>
+        <a href="tel:+918303377024" class="btn btn-outline-white btn-lg" id="cta-call-btn">📞 Talk to an Expert</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="images/logo.svg" alt="BJ FINANCES Logo" class="footer__logo-img" width="40" height="40">
+          <div class="footer__logo-text">BJ <span class="text-gold">FINANCES</span></div>
+        </div>
+        <p class="footer__desc">Your Growth, Our Commitment. BJ FINANCES helps customers explore and apply for suitable financial products with professional guidance and dedicated support.</p>
+        <div class="footer__contact-item"><span class="footer__contact-icon" aria-hidden="true">📍</span><span>Block G, Noida Sector 3, Noida, UP – 201301</span></div>
+        <div class="footer__contact-item"><span class="footer__contact-icon" aria-hidden="true">📞</span><a href="tel:+918303377024">+91 83033 77024</a></div>
+        <div class="footer__contact-item"><span class="footer__contact-icon" aria-hidden="true">📧</span><a href="mailto:support.bjfinances@gmail.com">support.bjfinances@gmail.com</a></div>
+      </div>
+      <div>
+        <h5>Products</h5>
+        <nav class="footer__links" aria-label="Products">
+          <a href="personal-loan.html">Personal Loan</a>
+          <a href="overdraft.html">Overdraft / OD</a>
+          <a href="balance-transfer.html">Balance Transfer</a>
+          <a href="top-up-loan.html">Top-Up Loan</a>
+          <a href="check-eligibility.html">Check Eligibility</a>
+        </nav>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <nav class="footer__links" aria-label="Company">
+          <a href="about.html">About Us</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="careers.html">Careers</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <nav class="footer__links" aria-label="Legal">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+        <div style="margin-top:24px;">
+          <h5>Connect</h5>
+          <nav class="footer__links" aria-label="Connect">
+            <a href="tel:+918303377024">📞 Call Us</a>
+            <a href="https://wa.me/918303377024" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+            <a href="mailto:support.bjfinances@gmail.com">✉️ Email Us</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="footer__disclaimer">
+      <strong>Disclaimer:</strong> BJ FINANCES is a financial services facilitator and may assist customers in exploring and applying for financial products offered by banks, NBFCs and other authorised financial institutions. BJ FINANCES does not guarantee loan approval. All loan approvals, interest rates, loan amounts, tenure, fees and other terms are determined solely by the respective lender based on its applicable policies and credit assessment. This website is for informational and lead generation purposes only.
+    </div>
+    <div class="footer__bottom">
+      <span>© 2024 BJ FINANCES. All rights reserved.</span>
+      <nav aria-label="Footer legal links" style="display:flex;gap:16px;">
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ FLOATING CTAs ══════════════════════════════════════════ -->
+<div class="floating-actions" aria-label="Quick actions" style="opacity:0;pointer-events:none;transition:opacity 0.3s;">
+  <a href="https://wa.me/918303377024" class="fab fab-whatsapp" target="_blank" rel="noopener noreferrer" id="fab-whatsapp-btn" title="WhatsApp Us" aria-label="Open WhatsApp chat">💬</a>
+  <a href="tel:+918303377024" class="fab fab-call" id="fab-call-btn" title="Call Now" aria-label="Call BJ FINANCES">📞</a>
+</div>
+
+<script>
+// Calculator tab switcher (inline for speed)
+function switchTab(tab) {
+  document.querySelectorAll('.calc-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+  document.querySelectorAll('.calc-panel').forEach(p => p.style.display = 'none');
+  document.getElementById('tab-' + tab).classList.add('active');
+  document.getElementById('tab-' + tab).setAttribute('aria-selected','true');
+  document.getElementById('panel-' + tab).style.display = 'block';
+}
+</script>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balance Transfer — Explore Better Loan Options | BJ FINANCES</title>
+  <meta name="description" content="Explore whether transferring your existing personal loan to another lender could provide more suitable repayment terms. BJ FINANCES assists with balance transfer applications in Noida.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .bt-comparison {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 20px;
+      align-items: center;
+      margin: 32px 0;
+    }
+    .bt-box {
+      background: var(--bg-light);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      text-align: center;
+      border: 2px solid var(--border);
+    }
+    .bt-box.current { border-color: #E53E3E; }
+    .bt-box.new-lender { border-color: var(--green); background: var(--green-pale); }
+    .bt-box h4 { font-size: 0.85rem; color: var(--text-mid); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .bt-box .amount { font-size: 1.6rem; font-weight: 800; margin-bottom: 4px; }
+    .bt-box.current .amount { color: #E53E3E; }
+    .bt-box.new-lender .amount { color: var(--green); }
+    .bt-arrow { font-size: 2rem; color: var(--navy); text-align: center; }
+    .consideration-card { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 14px; }
+    .consideration-card .icon { font-size: 1.4rem; flex-shrink: 0; }
+    @media(max-width:600px) { .bt-comparison { grid-template-columns: 1fr; } .bt-arrow { transform: rotate(90deg); } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <img src="images/logo.svg" alt="BJ FINANCES Logo" class="navbar__logo-img" width="48" height="48">
+      <div class="navbar__logo-text">
+        <span class="navbar__logo-name">BJ <span class="text-gold">FINANCES</span></span>
+        <span class="navbar__logo-tagline">Your Growth, Our Commitment</span>
+      </div>
+    </a>
+    <nav class="navbar__nav">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <span class="dropdown-toggle" tabindex="0" role="button">Loans <span>▾</span></span>
+        <div class="dropdown-menu">
+          <a href="personal-loan.html">Personal Loan</a>
+          <a href="overdraft.html">Overdraft / OD</a>
+          <a href="balance-transfer.html">Balance Transfer</a>
+          <a href="top-up-loan.html">Top-Up Loan</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="navbar__actions">
+      <a href="tel:+918303377024" class="btn btn-outline btn-sm">📞 Call Us</a>
+      <a href="check-eligibility.html" class="btn btn-primary btn-sm">Check Eligibility</a>
+    </div>
+    <button class="navbar__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+    <strong style="color:var(--navy)">BJ FINANCES</strong>
+    <button id="mobileClose" style="background:none;border:none;font-size:1.5rem;cursor:pointer;">✕</button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="#" class="mobile-toggle" style="display:flex;justify-content:space-between;">Loans <span class="toggle-arrow">▾</span></a>
+  <div class="mobile-sub" style="display:none;">
+    <a href="personal-loan.html">Personal Loan</a><a href="overdraft.html">Overdraft / OD</a>
+    <a href="balance-transfer.html">Balance Transfer</a><a href="top-up-loan.html">Top-Up Loan</a>
+  </div>
+  <a href="about.html">About Us</a><a href="how-it-works.html">How It Works</a>
+  <a href="careers.html">Careers</a><a href="contact.html">Contact Us</a>
+  <div class="mobile-nav-cta">
+    <a href="check-eligibility.html?product=bt" class="btn btn-primary btn-full">Check BT Options</a>
+    <a href="tel:+918303377024" class="btn btn-outline btn-full">📞 +91 83033 77024</a>
+  </div>
+</div>
+
+<main>
+<div class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Balance Transfer</span></nav>
+    <span class="section-label" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.9);">🔄 Balance Transfer</span>
+    <h1>Explore Better Options<br>for Your Existing Loan</h1>
+    <p>Share basic details about your existing loan and explore whether a balance transfer may be suitable for your situation. Our team will guide you through the process.</p>
+  </div>
+</div>
+
+<!-- OVERVIEW + FORM -->
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2" style="align-items:start;gap:48px;">
+      <div>
+        <span class="section-label">What is Balance Transfer?</span>
+        <h2 style="margin-bottom:16px;">Move Your Loan for Potentially Better Terms</h2>
+        <p>A balance transfer involves moving an existing loan from your current lender to another lender. This may be considered when a customer wishes to explore more suitable repayment terms, subject to eligibility and lender approval.</p>
+        <div class="highlight-box" style="margin-top:20px;">⚠️ A balance transfer decision should consider interest-rate differences, outstanding balance, remaining tenure and any applicable switching costs. BJ FINANCES recommends evaluating all factors before proceeding.</div>
+
+        <div class="bt-comparison" style="margin-top:32px;">
+          <div class="bt-box current">
+            <h4>Current Lender</h4>
+            <div class="amount">Higher Rate</div>
+            <p style="font-size:0.78rem;color:var(--text-light);">Existing loan with current EMI</p>
+          </div>
+          <div class="bt-arrow" aria-hidden="true">→</div>
+          <div class="bt-box new-lender">
+            <h4>New Lender</h4>
+            <div class="amount">Lower Rate*</div>
+            <p style="font-size:0.78rem;color:var(--green);">Subject to eligibility & approval</p>
+          </div>
+        </div>
+
+        <h3 style="margin:28px 0 16px;">Who May Benefit?</h3>
+        <ul class="info-list">
+          <li>Customers currently paying relatively high interest rates</li>
+          <li>Customers with existing personal loans looking for better repayment options</li>
+          <li>Customers seeking potential EMI reduction over remaining tenure</li>
+          <li>Customers interested in a top-up along with balance transfer</li>
+          <li>Customers with improved credit profile since original loan</li>
+        </ul>
+
+        <h3 style="margin:28px 0 16px;">Key Considerations</h3>
+        <div class="consideration-card"><div class="icon">📊</div><div><h4>Interest Rate Difference</h4><p style="font-size:0.85rem;">The potential benefit depends on the rate difference between current and proposed lender.</p></div></div>
+        <div class="consideration-card"><div class="icon">📅</div><div><h4>Remaining Tenure</h4><p style="font-size:0.85rem;">Longer remaining tenure may provide more benefit, but this varies by situation.</p></div></div>
+        <div class="consideration-card"><div class="icon">💰</div><div><h4>Switching Costs</h4><p style="font-size:0.85rem;">Processing fees, foreclosure charges and other costs should be factored into your decision.</p></div></div>
+        <div class="consideration-card"><div class="icon">✅</div><div><h4>Eligibility Reassessment</h4><p style="font-size:0.85rem;">The new lender will independently assess your current eligibility based on their policies.</p></div></div>
+      </div>
+
+      <!-- BT Form -->
+      <div>
+        <div class="form-card">
+          <h3 style="margin-bottom:8px;color:var(--navy);">Check Balance Transfer Options</h3>
+          <p style="font-size:0.85rem;margin-bottom:24px;">Share your existing loan details and our team will reach out.</p>
+          <form id="btForm" novalidate>
+            <input type="hidden" name="product" value="Balance Transfer">
+            <div class="form-grid-2">
+              <div class="form-group"><label>Full Name *</label><input type="text" name="fullName" placeholder="Your full name" required></div>
+              <div class="form-group"><label>Mobile Number *</label><input type="tel" name="mobile" placeholder="10-digit number" required maxlength="10"></div>
+            </div>
+            <div class="form-group"><label>Existing Lender / Bank</label><input type="text" name="existingLender" placeholder="Name of your current bank/NBFC"></div>
+            <div class="form-grid-2">
+              <div class="form-group"><label>Original Loan Amount (₹)</label><input type="number" name="originalAmount" placeholder="e.g. 500000"></div>
+              <div class="form-group"><label>Current Outstanding (₹)</label><input type="number" name="outstanding" placeholder="e.g. 350000"></div>
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group"><label>Current Interest Rate (%)</label><input type="number" name="currentRate" placeholder="e.g. 18" step="0.1"></div>
+              <div class="form-group"><label>Current EMI (₹)</label><input type="number" name="currentEmi" placeholder="e.g. 12000"></div>
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label>Remaining Tenure</label>
+                <select name="remainingTenure">
+                  <option value="">Select...</option>
+                  <option>Less than 6 months</option>
+                  <option>6 – 12 months</option>
+                  <option>12 – 24 months</option>
+                  <option>24 – 36 months</option>
+                  <option>36 – 48 months</option>
+                  <option>More than 48 months</option>
+                </select>
+              </div>
+              <div class="form-group"><label>Monthly Salary (₹)</label><input type="number" name="income" placeholder="e.g. 45000"></div>
+            </div>
+            <div class="form-group"><label>Top-Up Requirement (₹) — Optional</label><input type="number" name="topUp" placeholder="Additional amount required, if any"></div>
+            <div class="form-group"><label>City</label><input type="text" name="city" placeholder="Your city"></div>
+            <button type="submit" class="btn btn-primary btn-full btn-lg" style="margin-top:8px;">CHECK MY BALANCE TRANSFER OPTIONS</button>
+            <p class="form-disclaimer">By submitting this form, you consent to being contacted by BJ FINANCES. Final BT terms are subject to new lender's policies and credit assessment. Switching costs and applicable charges should be evaluated before proceeding.</p>
+          </form>
+          <div class="form-success" style="display:none;">
+            <div class="form-success__icon">✅</div>
+            <h3 style="color:var(--green)">Thank You!</h3>
+            <p>Your details have been received. A BJ FINANCES representative may contact you to discuss your balance transfer options.</p>
+            <p style="font-size:0.78rem;color:var(--text-light);margin-top:10px;">Reference: <strong class="lead-id"></strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BT CALCULATOR -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="text-center mb-48">
+      <span class="section-label">Calculator</span>
+      <h2>Balance Transfer Calculator</h2>
+      <p style="max-width:500px;margin:16px auto 0;">Compare your current EMI with a potential new EMI. Results are indicative only.</p>
+    </div>
+    <div style="max-width:650px;margin:0 auto;">
+      <div class="calculator-card" id="btCalculator">
+        <div class="calc-slider-group">
+          <label for="btOutstanding">Outstanding Balance <span id="btOutstandingDisp">₹3,00,000</span></label>
+          <input type="range" id="btOutstanding" min="50000" max="3000000" value="300000" step="25000">
+        </div>
+        <div class="calc-slider-group">
+          <label for="btCurrentRate">Current Interest Rate <span id="btCurrentRateDisp">18.0%</span></label>
+          <input type="range" id="btCurrentRate" min="10" max="36" value="18" step="0.5">
+        </div>
+        <div class="calc-slider-group">
+          <label for="btTenure">Remaining Tenure <span id="btTenureDisp">36 Months</span></label>
+          <input type="range" id="btTenure" min="6" max="84" value="36" step="6">
+        </div>
+        <div class="calc-slider-group">
+          <label for="btNewRate">Proposed New Rate <span id="btNewRateDisp">14.0%</span></label>
+          <input type="range" id="btNewRate" min="8" max="30" value="14" step="0.5">
+        </div>
+        <div class="calc-result">
+          <div class="calc-result__item">
+            <span class="calc-result__value" id="btCurrentEmi">₹0</span>
+            <span class="calc-result__label">Current EMI (Est.)</span>
+          </div>
+          <div class="calc-result__item">
+            <span class="calc-result__value" id="btNewEmi">₹0</span>
+            <span class="calc-result__label">New EMI (Est.)</span>
+          </div>
+          <div class="calc-result__item">
+            <span class="calc-result__value" id="btSavings">₹0</span>
+            <span class="calc-result__label">Monthly Difference</span>
+          </div>
+        </div>
+        <p style="font-size:0.72rem;color:var(--text-light);margin-top:12px;text-align:center;">* Indicative only. Actual BT terms, interest rate and EMI are subject to lender approval. Switching costs and processing fees are not included in this calculation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container container--sm">
+    <div class="text-center mb-32"><span class="section-label">FAQ</span><h2>Balance Transfer FAQs</h2></div>
+    <div class="faq-item"><div class="faq-question">Will a balance transfer definitely reduce my EMI? <span class="faq-arrow">▾</span></div><div class="faq-answer">Not necessarily. EMI reduction depends on the interest rate difference, outstanding balance, remaining tenure and any applicable switching charges. BJ FINANCES recommends evaluating all factors before proceeding.</div></div>
+    <div class="faq-item"><div class="faq-question">Are there charges for a balance transfer? <span class="faq-arrow">▾</span></div><div class="faq-answer">Most lenders charge a foreclosure fee from the existing lender and a processing fee from the new lender. These charges vary and should be factored into your calculation.</div></div>
+    <div class="faq-item"><div class="faq-question">Can I get a top-up with a balance transfer? <span class="faq-arrow">▾</span></div><div class="faq-answer">Some lenders offer a top-up loan along with a balance transfer for eligible customers. This is subject to lender policy and your credit assessment.</div></div>
+    <div class="faq-item"><div class="faq-question">Does BJ FINANCES guarantee BT approval? <span class="faq-arrow">▾</span></div><div class="faq-answer">No. BJ FINANCES assists with the balance transfer application process. Approval, rate and terms are decided solely by the new lender based on their credit assessment.</div></div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div style="background:linear-gradient(135deg,var(--green) 0%,var(--navy) 100%);border-radius:var(--radius-xl);padding:56px 48px;text-align:center;">
+      <h2 style="color:white;margin-bottom:12px;">Explore Your Balance Transfer Options</h2>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:28px;">Our team will review your existing loan details and discuss whether a BT may be suitable for your situation.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="check-eligibility.html?product=bt" class="btn btn-outline-white btn-lg">✅ Check Eligibility</a>
+        <a href="tel:+918303377024" class="btn btn-outline-white btn-lg">📞 Talk to an Expert</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="images/logo.svg" alt="BJ FINANCES Logo" class="footer__logo-img" width="40" height="40">
+          <div class="footer__logo-text">BJ <span class="text-gold">FINANCES</span></div>
+        </div>
+        <p class="footer__desc">Your Growth, Our Commitment. Professional loan facilitation and balance transfer assistance.</p>
+        <div class="footer__contact-item"><span class="footer__contact-icon">📍</span><span>Block G, Noida Sector 3, Noida, UP – 201301</span></div>
+        <div class="footer__contact-item"><span class="footer__contact-icon">📞</span><a href="tel:+918303377024">+91 83033 77024</a></div>
+        <div class="footer__contact-item"><span class="footer__contact-icon">📧</span><a href="mailto:support.bjfinances@gmail.com">support.bjfinances@gmail.com</a></div>
+      </div>
+      <div><h5>Products</h5><nav class="footer__links"><a href="personal-loan.html">Personal Loan</a><a href="overdraft.html">Overdraft / OD</a><a href="balance-transfer.html">Balance Transfer</a><a href="top-up-loan.html">Top-Up Loan</a></nav></div>
+      <div><h5>Company</h5><nav class="footer__links"><a href="about.html">About Us</a><a href="how-it-works.html">How It Works</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></nav></div>
+      <div><h5>Legal</h5><nav class="footer__links"><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="disclaimer.html">Disclaimer</a></nav></div>
+    </div>
+    <div class="footer__disclaimer"><strong>Disclaimer:</strong> BJ FINANCES is a financial services facilitator. BT approval, interest rates and terms are determined solely by the respective lender. Switching costs should be evaluated before proceeding.</div>
+    <div class="footer__bottom"><span>© 2024 BJ FINANCES. All rights reserved.</span></div>
+  </div>
+</footer>
+<div class="floating-actions" style="opacity:0;pointer-events:none;transition:opacity 0.3s;">
+  <a href="https://wa.me/918303377024" class="fab fab-whatsapp" target="_blank" rel="noopener">💬</a>
+  <a href="tel:+918303377024" class="fab fab-call">📞</a>
+</div>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/calculator.js"></script>
+</body>
+</html>

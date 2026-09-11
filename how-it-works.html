@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works — BJ FINANCES Process</title>
+  <meta name="description" content="Understand the simple 4-step process BJ FINANCES uses to assist you in exploring and applying for suitable financial products.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .process-timeline { max-width: 800px; margin: 48px auto; position: relative; }
+    .process-timeline::before { content: ''; position: absolute; top: 0; bottom: 0; left: 40px; width: 3px; background: var(--bg-grey); border-radius: 3px; }
+    .process-step { position: relative; padding-left: 100px; margin-bottom: 60px; }
+    .process-step:last-child { margin-bottom: 0; }
+    .process-step__number { position: absolute; left: 16px; top: 0; width: 52px; height: 52px; background: var(--navy); border-radius: 50%; color: var(--white); font-size: 1.4rem; font-weight: 800; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 8px var(--white); z-index: 2; }
+    .process-step__content { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-sm); }
+    .process-step__content h3 { color: var(--green); margin-bottom: 12px; }
+    .process-step__content p { color: var(--text-mid); margin-bottom: 16px; }
+    .process-step__list { list-style: none; padding: 0; }
+    .process-step__list li { position: relative; padding-left: 20px; font-size: 0.9rem; color: var(--text-dark); margin-bottom: 8px; }
+    .process-step__list li::before { content: '•'; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+    @media(max-width:600px) {
+      .process-timeline::before { left: 24px; }
+      .process-step { padding-left: 0; padding-top: 64px; margin-bottom: 40px; }
+      .process-step__number { left: 0; width: 44px; height: 44px; font-size: 1.1rem; }
+      .process-step__content { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <img src="images/logo.svg" alt="BJ FINANCES Logo" class="navbar__logo-img" width="48" height="48">
+      <div class="navbar__logo-text">
+        <span class="navbar__logo-name">BJ <span class="text-gold">FINANCES</span></span>
+        <span class="navbar__logo-tagline">Your Growth, Our Commitment</span>
+      </div>
+    </a>
+    <nav class="navbar__nav">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <span class="dropdown-toggle" tabindex="0" role="button">Loans <span>▾</span></span>
+        <div class="dropdown-menu">
+          <a href="personal-loan.html">Personal Loan</a><a href="overdraft.html">Overdraft / OD</a>
+          <a href="balance-transfer.html">Balance Transfer</a><a href="top-up-loan.html">Top-Up Loan</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a>
+      <a href="how-it-works.html" style="color:var(--navy);font-weight:800;">How It Works</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="navbar__actions">
+      <a href="tel:+918303377024" class="btn btn-outline btn-sm">📞 Call Us</a>
+      <a href="check-eligibility.html" class="btn btn-primary btn-sm">Check Eligibility</a>
+    </div>
+    <button class="navbar__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+    <strong style="color:var(--navy)">BJ FINANCES</strong>
+    <button id="mobileClose" style="background:none;border:none;font-size:1.5rem;cursor:pointer;">✕</button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="#" class="mobile-toggle" style="display:flex;justify-content:space-between;">Loans <span class="toggle-arrow">▾</span></a>
+  <div class="mobile-sub" style="display:none;">
+    <a href="personal-loan.html">Personal Loan</a><a href="overdraft.html">Overdraft / OD</a>
+    <a href="balance-transfer.html">Balance Transfer</a><a href="top-up-loan.html">Top-Up Loan</a>
+  </div>
+  <a href="about.html">About Us</a><a href="how-it-works.html">How It Works</a>
+</div>
+
+<main>
+<div class="page-hero">
+  <div class="container">
+    <span class="section-label" style="background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.9);">The Process</span>
+    <h1>How It Works</h1>
+    <p>We believe in a structured, transparent process to help you explore and apply for financial products.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="process-timeline">
+      
+      <!-- Step 1 -->
+      <div class="process-step">
+        <div class="process-step__number">1</div>
+        <div class="process-step__content">
+          <h3>Tell Us Your Requirement</h3>
+          <p>The journey begins when you share your basic financial requirement with us. You can do this by filling out a short form on our website or by calling our support team.</p>
+          <ul class="process-step__list">
+            <li>Select the product you are interested in</li>
+            <li>Provide basic contact and employment details</li>
+            <li>Indicate your required loan amount</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="process-step">
+        <div class="process-step__number">2</div>
+        <div class="process-step__content">
+          <h3>Our Team Reviews Your Profile</h3>
+          <p>Once we receive your details, a dedicated BJ FINANCES representative will contact you. We take the time to understand your specific situation, existing obligations, and requirements.</p>
+          <ul class="process-step__list">
+            <li>Detailed discussion on a phone call</li>
+            <li>Initial assessment of your profile</li>
+            <li>Clarification of your financial goals</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="process-step">
+        <div class="process-step__number">3</div>
+        <div class="process-step__content">
+          <h3>Explore Available Options</h3>
+          <p>Based on the information provided, we explore potential options that may align with your profile, drawing upon the eligibility criteria of our partner banks and NBFCs.</p>
+          <ul class="process-step__list">
+            <li>Identification of suitable lenders</li>
+            <li>Explanation of indicative terms and processes</li>
+            <li>Review of documentation requirements</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="process-step">
+        <div class="process-step__number">4</div>
+        <div class="process-step__content">
+          <h3>Application Assistance</h3>
+          <p>If you choose to proceed, we guide you through the documentation process and coordinate the application with the chosen lender.</p>
+          <ul class="process-step__list">
+            <li>Assistance with form filling and document compilation</li>
+            <li>Submission coordination with the lender</li>
+            <li>Follow-up and updates during lender processing</li>
+          </ul>
+          <div class="highlight-box" style="margin-top:20px;margin-bottom:0;">
+            ⚠️ <strong>Important Note:</strong> The final decision regarding loan approval, sanction amount, interest rate, and tenure is made exclusively by the lending institution based on their comprehensive credit assessment.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container text-center">
+    <h2>Ready to Start the Process?</h2>
+    <p style="margin:16px 0 32px;">Click below to share your requirements and initiate step 1.</p>
+    <a href="check-eligibility.html" class="btn btn-primary btn-lg">Check Eligibility Now</a>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="images/logo.svg" alt="BJ FINANCES Logo" class="footer__logo-img" width="40" height="40">
+          <div class="footer__logo-text">BJ <span class="text-gold">FINANCES</span></div>
+        </div>
+        <p class="footer__desc">Your Growth, Our Commitment.</p>
+        <div class="footer__contact-item"><span class="footer__contact-icon">📍</span><span>Block G, Noida Sector 3, Noida, UP</span></div>
+        <div class="footer__contact-item"><span class="footer__contact-icon">📞</span><a href="tel:+918303377024">+91 83033 77024</a></div>
+      </div>
+      <div><h5>Legal</h5><nav class="footer__links"><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="disclaimer.html">Disclaimer</a></nav></div>
+    </div>
+    <div class="footer__disclaimer"><strong>Disclaimer:</strong> BJ FINANCES is a financial services facilitator. Loan approval is at the sole discretion of the lender.</div>
+    <div class="footer__bottom"><span>© 2024 BJ FINANCES. All rights reserved.</span></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
